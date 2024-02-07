@@ -1,12 +1,20 @@
-import './App.css'
+import { useEffect } from "react";
+import { fetchDataFromApi } from "./utils/api";
 
 function App() {
+  useEffect(() => {
+    apiTesting();
+  }, []);
 
-  return (
-    <div className='app'>
-        
-    </div>
-  )
+  const apiTesting = () => {
+    fetchDataFromApi("/movie/popular").then((res) => {
+      console.log(res);
+    });
+  };
+
+  return <div className="app">
+    <h2>Movix</h2>
+  </div>;
 }
 
-export default App
+export default App;
