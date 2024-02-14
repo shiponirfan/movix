@@ -1,8 +1,11 @@
+import HeroBanner from "./heroBanner/HeroBanner";
 import "./style.scss";
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <div className="homePage">
+      <HeroBanner/>
+    </div>
   )
 }
 
